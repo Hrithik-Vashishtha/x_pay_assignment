@@ -62,6 +62,26 @@ This Flask-based web application facilitates user registration and stores profil
                 use registrations
                 db.createCollection("profile_picture")
                 ```
+            - Run the following SQL commands to create necessary tables:
+
+                ```sql
+                CREATE TABLE user_details (
+                    user_id SERIAL PRIMARY KEY,
+                    first_name VARCHAR(50),
+                    email VARCHAR(100) UNIQUE,
+                    password VARCHAR(100),
+                    phone VARCHAR(20)
+                );
+
+                CREATE TABLE profile (
+                    user_id INTEGER PRIMARY KEY,
+                    profile_picture BYTEA,
+                    FOREIGN KEY (user_id) REFERENCES user_details(user_id)
+                );
+
+                ```
+
+              
 
         - For `app2.py`:
             - Run the following SQL commands to create necessary tables:
