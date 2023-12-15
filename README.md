@@ -66,8 +66,7 @@ This Flask-based web application enables user registration and stores profile pi
 
 ## Contributors
 
-- [@YourUsername](https://github.com/YourUsername)
-- [@Collaborator1](https://github.com/Collaborator1)
+- [@YourUsername](https://github.com/Hrithik-Vashishtha)
 
 ## License
 
