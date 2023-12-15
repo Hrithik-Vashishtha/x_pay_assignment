@@ -73,12 +73,6 @@ This Flask-based web application facilitates user registration and stores profil
                     phone VARCHAR(20)
                 );
 
-                CREATE TABLE profile (
-                    user_id INTEGER PRIMARY KEY,
-                    profile_picture BYTEA,
-                    FOREIGN KEY (user_id) REFERENCES user_details(user_id)
-                );
-
                 ```
 
               
