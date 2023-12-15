@@ -1,4 +1,3 @@
-Certainly! Here’s the updated README file with the instructions to create the `profile_picture` collection in MongoDB for `app1.py`:
 
 ---
 
