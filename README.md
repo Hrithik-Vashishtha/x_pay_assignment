@@ -1,3 +1,4 @@
+Certainly! Here’s the updated README file with the instructions to create the `profile_picture` collection in MongoDB for `app1.py`:
 
 ---
 
@@ -54,22 +55,13 @@ This Flask-based web application facilitates user registration and stores profil
             ```
 
         - For `app1.py`:
-            - Run the following SQL commands to create necessary tables:
+            - Ensure MongoDB is installed and running.
+            - Access MongoDB shell or use a MongoDB GUI tool.
+            - Create a collection named `profile_picture` within the `registrations` database:
 
-                ```sql
-                CREATE TABLE user_details (
-                    user_id SERIAL PRIMARY KEY,
-                    first_name VARCHAR(50),
-                    email VARCHAR(100) UNIQUE,
-                    password VARCHAR(100),
-                    phone VARCHAR(20)
-                );
-
-                CREATE TABLE profile (
-                    user_id INTEGER PRIMARY KEY,
-                    profile_picture BYTEA,
-                    FOREIGN KEY (user_id) REFERENCES user_details(user_id)
-                );
+                ```javascript
+                use registrations
+                db.createCollection("profile_picture")
                 ```
 
         - For `app2.py`:
@@ -130,6 +122,5 @@ Note: Ensure that all fields are correctly filled out, and the profile picture i
 ## Contributors
 
 - [@Hrithik-Vashishtha](https://github.com/Hrithik-Vashishtha)
-
 
 ---
