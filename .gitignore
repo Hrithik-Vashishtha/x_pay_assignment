@@ -1,0 +1,5 @@
+/.venv
+/.idea
+/__pycache__/
+/xpay_test.pdf
+/try.py
