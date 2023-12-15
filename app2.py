@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 import psycopg2
 import os
+from werkzeug.utils import secure_filename
+
 
 app = Flask(__name__)
 
@@ -18,9 +20,6 @@ curr = conn.cursor()
 @app.route('/')
 def index():
     return render_template('index.html')
-
-# @app.route('/add_user', methods=['POST'])
-# def add_user():
     # Extracting form data
     name = request.form['name']
     email = request.form['email']
